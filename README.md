@@ -26,3 +26,7 @@ python3 -m http.server -d site 8000
 
 See [`site/README.md`](site/README.md) for details on features and how the data file is
 generated from the CSV.
+
+## View of the page
+
+![Missing Migrants interactive world map: clustered incident markers by region, cause-of-death legend, and a side panel with per-year and per-region totals](docs/screenshot.png)
