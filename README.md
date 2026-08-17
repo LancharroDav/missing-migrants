@@ -2,8 +2,10 @@
 
 A static website (plain HTML, CSS and JavaScript) that visualizes incidents involving
 migrants — including refugees and asylum-seekers — who have died or gone missing in the
-process of migration towards an international destination. Incidents are grouped by
-world region on a zoomable map.
+process of migration towards an international destination. Incidents are clustered on a
+zoomable map at their actual locations — clusters split into individual incidents as you
+zoom — with per-region statistics, cause-of-death colors and filtering, a year-range
+filter, and a timeline animation.
 
 ## Data source
 

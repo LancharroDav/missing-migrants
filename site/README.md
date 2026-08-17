@@ -17,12 +17,20 @@ python3 -m http.server -d site 8000
 
 ## Features
 
-- **World view**: one bubble per region of incident, sized by total dead & missing.
-- **Region view**: click a bubble (or a region in the sidebar) to zoom in and see every
-  recorded incident as an individual dot with a detail popup (year, cause, location).
+- **Zoom-tiered clustering**: all ~22,000 incidents are on the map at once, grouped into
+  clusters positioned where the incidents actually occurred (Leaflet.markercluster).
+  Cluster badges show the summed number of dead & missing, and clusters split apart as
+  you zoom until each dot is a single incident with a detail popup (year, cause,
+  location). Hovering a cluster shows its total, incident count, and dominant region.
+- **Cause-of-death colors + filter**: dots are colored by cause group (drowning,
+  violence, vehicle/transport, harsh environment, sickness, accidental, mixed/unknown).
+  Filter by cause via the toolbar dropdown or by clicking the on-map legend.
 - **Year filter**: restrict the map and statistics to a range of years (2014–2026).
-- **Sidebar**: per-year chart, cause-of-death breakdown, top routes/countries, and
-  recorded demographics for the selected region.
+- **Timeline animation**: the ▶ Play button steps through the years one by one,
+  animating how incidents evolve over time.
+- **Sidebar**: world overview with a ranked, clickable region list, plus per-region
+  per-year chart, cause-of-death breakdown, top routes/countries, and recorded
+  demographics. Clicking a region zooms the map to its bounds.
 
 ## Regenerating the data
 
