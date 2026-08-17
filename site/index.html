@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing Migrants — Global Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title-block">
+      <h1>Missing Migrants Project</h1>
+      <p class="subtitle">Deaths and disappearances during migration, grouped by world region · IOM data 2014–2026</p>
+    </div>
+    <div class="global-stats" id="global-stats"></div>
+  </header>
+
+  <div class="controls">
+    <label>Years
+      <select id="year-from"></select>
+      <span>–</span>
+      <select id="year-to"></select>
+    </label>
+    <button id="reset-view" hidden>⟵ Back to world view</button>
+    <span class="hint" id="hint">Click a region bubble to zoom in and see individual incidents</span>
+  </div>
+
+  <main>
+    <div id="map"></div>
+    <aside id="sidebar">
+      <div id="panel"></div>
+    </aside>
+  </main>
+
+  <footer>
+    Source: <a href="https://missingmigrants.iom.int/" target="_blank" rel="noopener">IOM Missing Migrants Project</a>.
+    Figures are minimum estimates; many deaths go unrecorded.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
