@@ -73,9 +73,94 @@ select {
 
 .hint { color: var(--muted); }
 
+#play-timeline {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+#play-timeline:hover { border-color: var(--accent); }
+
+#timeline-year {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 3.2rem;
+}
+
 main { flex: 1; display: flex; min-height: 0; }
 
-#map { flex: 1; background: #0b0e13; }
+#map { flex: 1; background: #0b0e13; position: relative; }
+
+/* incident dots (divIcon) */
+.mm-dot { background: transparent; border: none; }
+.mm-dot span {
+  display: block;
+  border-radius: 50%;
+  opacity: 0.85;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* weighted cluster badges */
+.mm-cluster {
+  background: rgba(226, 87, 76, 0.35);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.mm-cluster span { font-size: 0.7rem; }
+.mm-cluster-md { background: rgba(226, 87, 76, 0.45); }
+.mm-cluster-md span { font-size: 0.75rem; }
+.mm-cluster-lg { background: rgba(226, 87, 76, 0.55); }
+.mm-cluster-lg span { font-size: 0.8rem; }
+.mm-cluster-xl { background: rgba(226, 87, 76, 0.7); }
+.mm-cluster-xl span { font-size: 0.85rem; }
+
+/* legend */
+#legend {
+  position: absolute;
+  bottom: 24px;
+  left: 12px;
+  z-index: 800;
+  background: rgba(26, 32, 41, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.75rem;
+  max-width: 200px;
+}
+#legend h4 {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text);
+}
+.legend-row:hover { background: var(--panel-2); }
+.legend-row.active { background: var(--panel-2); outline: 1px solid var(--accent); }
+.legend-row .swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
 #sidebar {
   width: 340px;
