@@ -1,11 +1,17 @@
 # Missing Migrants — Interactive World Map
 
-A static website (plain HTML, CSS and JavaScript) that visualizes incidents involving
-migrants — including refugees and asylum-seekers — who have died or gone missing in the
-process of migration towards an international destination. Incidents are clustered on a
-zoomable map at their actual locations — clusters split into individual incidents as you
-zoom — with per-region statistics, cause-of-death colors and filtering, a year-range
-filter, and a timeline animation.
+Every year, thousands of people die or disappear while migrating across borders — in
+deserts, at sea, in detention, and along countless other routes. This project maps those
+lives.
+
+Using data from the International Organization for Migration's Missing Migrants Project,
+the site plots reported incidents on an interactive world map. Each point represents a
+documented event, colored by cause of death. Zoom in to break clusters into individual
+incidents, filter the timeline by year or by cause of death, and explore per-region
+stories — who was traveling, where they came from, where they were going, and what
+happened.
+
+Figures are minimum estimates; many deaths go unrecorded.
 
 ## Data source
 
