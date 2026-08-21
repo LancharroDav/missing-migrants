@@ -27,6 +27,13 @@ python3 -m http.server -d site 8000
 See [`site/README.md`](site/README.md) for details on features and how the data file is
 generated from the CSV.
 
+## Deploy to GitHub Pages
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which publishes the contents of
+`site/` to GitHub Pages. In the repository settings, set **Pages → Source** to
+**GitHub Actions** (one-time). The site will be served at
+`https://<owner>.github.io/missing-migrants/`.
+
 ## View of the page
 
 ![Missing Migrants interactive world map: clustered incident markers by region, cause-of-death legend, and a side panel with per-year and per-region totals](docs/screenshot.png)
